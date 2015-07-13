@@ -96,6 +96,7 @@
 		C63EFF0F1B4F06040051DEB6 /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EFF0E1B4F06040051DEB6 /* Gameplay.swift */; };
 		C6BDC5241B503C430088CE13 /* Helicopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BDC5231B503C430088CE13 /* Helicopter.swift */; };
 		C6BDC5281B5040320088CE13 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BDC5271B5040320088CE13 /* Enemy.swift */; };
+		C6C28B9D1B5449B90070E947 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C28B9C1B5449B90070E947 /* Shot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +217,7 @@
 		C63EFF0E1B4F06040051DEB6 /* Gameplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 		C6BDC5231B503C430088CE13 /* Helicopter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helicopter.swift; sourceTree = "<group>"; };
 		C6BDC5271B5040320088CE13 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		C6C28B9C1B5449B90070E947 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -443,6 +445,7 @@
 				7A40362019DDEF0D007B6E8F /* Platforms */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
 				C63EFF0E1B4F06040051DEB6 /* Gameplay.swift */,
+				C6C28B9C1B5449B90070E947 /* Shot.swift */,
 				C6BDC5271B5040320088CE13 /* Enemy.swift */,
 				C6BDC5231B503C430088CE13 /* Helicopter.swift */,
 				D352B48019EC608A00829775 /* MetalShaders */,
@@ -827,6 +830,7 @@
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 				C6BDC5241B503C430088CE13 /* Helicopter.swift in Sources */,
+				C6C28B9D1B5449B90070E947 /* Shot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

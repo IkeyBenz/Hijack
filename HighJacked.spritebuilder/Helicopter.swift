@@ -10,7 +10,7 @@ import Foundation
 
 class Helicopter: CCSprite {
     weak var helicopter: CCSprite!
-    weak var enemy: CCSprite!
+    weak var enemy: Enemy!
     weak var heliPhysicsNode: CCPhysicsNode!
     
     var stillHasEnemies:Bool = true

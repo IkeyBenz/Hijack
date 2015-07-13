@@ -11,8 +11,8 @@ import Foundation
 class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     weak var positionOne: CCNode!
     weak var gamePhysicsNode: CCPhysicsNode!
-    
-//    weak var enemy: Enemy!
+    weak var enemy: Enemy!
+//    var helicopter: Helicopter?
     var helicopters: [Helicopter] = []
     
     func didLoadFromCCB() {
@@ -21,22 +21,40 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         animationManager.runAnimationsForSequenceNamed("HelicopterPosition")
         userInteractionEnabled = true
         
-        var helicopter = CCBReader.load("Helicopter") as! Helicopter
-        gamePhysicsNode.parent.addChild(helicopter)
-        helicopters.append(helicopter)
+        var helicopter = CCBReader.load("Helicopter") as! Helicopter?
+        gamePhysicsNode.addChild(helicopter)
+        helicopters.append(helicopter!)
         
         println("NEW GAME")
+        
+        gamePhysicsNode.collisionDelegate = self
+        gamePhysicsNode.debugDraw = true
      
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         for helicopter in helicopters {
-            if touch.locationInWorld() == helicopter.position {
-                helicopter.makeEnemyDisappear()
-            }
+            var shot = CCBReader.load("Shot2") as! Shot
+            shot.position = touch.locationInWorld()
+
+            gamePhysicsNode.addChild(shot)
+            
         }
     }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, shot: Shot!, enemy: CCSprite!) -> Bool {
+        println("Shot hit!")
+        if !shot.hasHit {
+            enemy.removeFromParent()
+        }
         
+        
+        return true
+    }
+    
+    
+   
+    
     
 
    
