@@ -12,13 +12,7 @@ class Shot: CCNode, CCPhysicsCollisionDelegate {
     var hasHit = false
     
     func didLoadFromCCB(){
-//        run some animation
-//        remove from parent
-//        **instead**
-//        delay .2
-//        remove from parent
-        
-        var delay = CCActionDelay(duration: 0.2)
+        var delay = CCActionDelay(duration: 0.05)
         var callBlock = CCActionCallBlock(block: {self.removeFromParent()})
         runAction(CCActionSequence(array: [delay, callBlock]))
     }
